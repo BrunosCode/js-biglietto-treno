@@ -17,5 +17,7 @@ if (userAge < 18) {
 if (userAge >= 65) {
     price *= over65Discount;
 }
+// round the price to decimal number
+price = Math.round(price * 100)/ 100;
 // show price to the user
 alert("The ticket price is: " + price + "€");
