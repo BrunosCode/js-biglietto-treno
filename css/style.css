@@ -38,6 +38,7 @@ main {
 }
 @media screen and (min-width: 500px) {
     .form {
+        max-width: 600px;
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
@@ -46,7 +47,7 @@ main {
         "label input"
         "label input"
         "button button";
-        margin: 1rem 3rem;
+        margin: 1rem auto;
     }
 }
 label {
@@ -54,6 +55,7 @@ label {
     margin: .5rem 0;
     font-weight: 700;
     justify-self: flex-start;
+    align-self: center;
 }
 input {
     border: none;
