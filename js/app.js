@@ -17,17 +17,19 @@ const ticketPrice = () => {
     document.getElementById('distance-error').innerHTML = "";
     // store price multiplier, minor discount and over 65 discount
     const priceMultiplier = 0.21;
-    const minorDiscount = 0.8;
-    const over65Discount = 0.6;
+    const minorDiscount = 0.2;
+    const over65Discount = 0.4;
     // calculate base price
     let price = distance * priceMultiplier;
     // if user is a minor apply discount
     if (userAge < 18) {
-        price *= minorDiscount;
+        price *= (1 - minorDiscount);
+        document.getElementById('discount').innerHTML = "*The discount for Minors has been applied";
     }
     // if user age is over 65 apply discount
     if (userAge >= 65) {
-        price *= over65Discount;
+        price *= (1 - over65Discount);
+        document.getElementById('discount').innerHTML = "*The discount for Over65 has been applied";
     }
     // round the price to decimal number
     price = Math.round(price * 100)/ 100;
